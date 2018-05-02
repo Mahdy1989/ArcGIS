@@ -30,7 +30,7 @@ fc16 = raw_input(str('Please enter the name of your eighth input from results: '
 ##############################################################################################################################
 ##############################################################################################################################
 from arcpy import env
-env.workspace = r'G:\Lidar\Texas\Client_Demo'
+env.workspace = r'G:\Lidar'
 
 g1=[fc1,fc2,fc3,fc4,fc5,fc6,fc7,fc8]
 g2=[fc9,fc10,fc11,fc12,fc13,fc14,fc15,fc16]
