@@ -39,26 +39,6 @@ def plot(alist):
         pGeom.append(arcpy.PointGeometry(p))
     return pGeom
 
-print '''This program complies with specifications of python on windows operating system.Also it takes advantage of some geospatial functions within ArcGIS, version 10.2or higher. It is highly recommended to run this program on appropriate machines.'''
-time.sleep(0.5)
-print '''
-This program requires that you place the script file in the most general work\nspace where all your input data are. The outputs of the program will\nbe generated at this location.'''
-time.sleep(0.5)
-print '''\nNote...'''
-time.sleep(1)
-print '''
-If your input is a shapefile, you need to specify its name followed by .shp'''
-time.sleep(0.5)
-print'''
-If your input is a layer within a geodatabase, specify your input as follows:\n\tdatabase.gdb/layer_name\n\twhere you have to specify the specific extension of your geodatabase.
-'''
-time.sleep(0.5)
-print'''\nImmediate action required...'''
-time.sleep(0.5)
-print'''Make a new folder where the script file is located and call it "results"...'''
-time.sleep(0.5)
-print'''...\n...'''
-time.sleep(3)
 ##############################################################################################################################
 ########################################## INPUTS INTO THE PROGRAM ###########################################################
 ##############################################################################################################################
