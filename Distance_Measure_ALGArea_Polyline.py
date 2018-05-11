@@ -1,9 +1,5 @@
 '''
-    This program is meant to solve the post-lidar processing of ARAN GPS points
-    which are not captured at precisely the right moment.
-
     Author: Seyed-Mahdy Sadraddini
-    Date of Creation: 21/09/2015
     Contact: msadraddini@gmail.com
 '''
 import sys,os,math,arcpy,time
@@ -78,8 +74,7 @@ fc9 = raw_input(str('Please enter the name of your nineth input: '))
 fc10 = raw_input(str('Please enter the name of your tenth input: '))
 fc11 = raw_input(str('Please enter the name of your comparison layer input from which results will be extrapolated: '))# This must be of Point type geometry, have the distancestamp field --> ARAN Data
 ##############################################################################################################################
-##############################################################################################################################
-##############################################################################################################################
+
 print '\n'
 arcpy.env.workspace = os.path.join(str(DIR()),'results')
 arcpy.env.overwriteOutput = True
