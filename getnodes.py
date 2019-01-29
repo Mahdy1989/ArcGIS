@@ -18,7 +18,7 @@ name = 'Sort_recno_ASC.shp'
 if arcpy.Exists(os.path.join(root,name)):
     shp = os.path.join(root,name)
 else:
-    shp = arcpy.Sort_management(shpf, os.path.join(root,name), [['recno', 'ASCENDING']])
+    shp = arcpy.Sort_management(shpf, os.path.join(root,name), [['Record_Number', 'ASCENDING']])
 
 b = 0
 rw_list = []
@@ -42,7 +42,7 @@ recordList = []
 for rw in rw_list:
     chg = []
 #---
-    with arcpy.da.SearchCursor(shp, ["SHAPE@WKT",'section','recno']) as cur:
+    with arcpy.da.SearchCursor(shp, ["SHAPE@WKT",'section','Record_Number']) as cur:
 #---#---
         for row in cur:
 #---#---#---
