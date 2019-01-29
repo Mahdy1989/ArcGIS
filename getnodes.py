@@ -95,7 +95,9 @@ if not os.path.exists(os.path.join(root,'results')):
 name = naming(xory)
 
 for k, v in d.iteritems():
-    v.sort(key = lambda node: (node[0], node[1])) # not a very clean sorting method!!!
+    v.sort(key = lambda node: (node[0], node[1])) # not a very clean sorting method!!! It's not a spatial sort.
+    # One weay to do a spatial sort is to track which node is coming from which feature.
+    # This means more code that's not implemented here.
     lines.append(arcpy.Polyline(arcpy.Array([arcpy.Point(*coords) for coords in v]),'WGS 1984'))
 
 
