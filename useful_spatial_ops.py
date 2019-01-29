@@ -35,6 +35,11 @@ def plot(alist):
         pGeom.append(arcpy.PointGeometry(p))
     return pGeom
 
+
+"Shape@"
+xy1 = row1[0].firstPoint
+startx = xy1.X  
+starty = xy1.Y 
 ##########################################################################
 
 desc = arcpy.Describe(feat)
