@@ -50,15 +50,3 @@ arcpy.Project_management(feat, new, sr_set)
 arcpy.CopyFeatures_management(plot(geom),os.path.join(arcpy.env.workspace,str(desc.baseName)+str(count)+'_closestPoint.shp'))
 
 arcpy.DefineProjection_management(n,arcpy.SpatialReference('NAD 1983 UTM ZONE 17N'))
-
-##########################################################################
-
-with arcpy.da.UpdateCursor(f_1,["ASSET_ID","StartStamp","EndStamp"]) as update:
-    for row in update:
-        with arcpy.da.SearchCursor(f_2,["ASSET_ID","Diststamp1","Diststamp2"]) as search:
-            for row2 in search:
-                if row[0]==row2[0]:
-                    row[1]=row2[1]
-                    row[2]=row2[2]
-                    update.updateRow(row)
-
